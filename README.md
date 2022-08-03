@@ -1,4 +1,4 @@
-# showcase-template
+# question-answer-showcase
 
 ## how to use
 

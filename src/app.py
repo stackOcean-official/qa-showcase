@@ -4,41 +4,27 @@ from transformers import pipeline
 # function to load model from wherever you need. Sample uses 
 @st.cache(allow_output_mutation=True, show_spinner=False)
 def use_model():
-    model_name = "oliverguhr/german-sentiment-bert"
-    sentiment_analysis_model = pipeline(model=model_name, tokenizer=model_name)
-    return sentiment_analysis_model
+    model_name = "deepset/gelectra-base-germanquad"
+    question_answer_model = pipeline(model=model_name, tokenizer=model_name ,task="question-answering")
+    return question_answer_model
 
-# main page
-st.title("Titel")
-explanation = st.expander("Wie funktioniert es?")
-explanation.write("Erklärung wie es funktioniert")
-what_else = st.expander("Was kann man noch machen?")
-what_else.write("Dinge die man noch machen kann")
 
 # change sample input as needed
-sample_input = ("Beispielsatz")
+sample_question = "Wo wohne ich?"
+sample_context = "Mein Name ist Klaus und ich lebe in Berlin"
 
-# and change whatever input values and methods are needed
-input_text = st.text_area(
-    label=(
-        "Schreibe einen deutschen Satz, oder versuche es mit dem vorgegebenen"
-        " Text"
-    ),
-    value=sample_input,
-    height=80,
-    max_chars=128,
-)
+input_question = st.text_input("Die zu beantwortende Frage:", value=sample_question, max_chars=128)
+input_context = st.text_area(label="Der Kontext aus dem die Antwort gefunden werden soll", value=sample_context, height = 200, max_chars=10000)
+
 # button returns a boolean value
-compute = st.button("Analysiere Text")
+compute = st.button("Beantworte meine Frage")
 if compute:
     with st.spinner("Lade Modell und berechne..."):
         # call model
         model = use_model()
-        output = model(input_text)
-        # transform output here as needed
-        st.subheader(
-            f"Ergebnis: {output}"
-        )
+        output = model(question=input_question, context=input_context)
+        st.subheader(f"Antwort: {output['answer']}")
+        st.write(f"Zuversicht: {round(output['score'] * 100, 2)}%")
 
 # remove menu for production
 hide_streamlit_style = """
