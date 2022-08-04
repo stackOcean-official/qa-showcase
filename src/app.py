@@ -13,11 +13,7 @@ def use_model():
 
 
 # change sample input as needed
-sample_question = (
-    "In welchem Quartal haben wir am meisten Umsatz gemacht?",
-    "Wie hat sich unser Gewinn entwickelt?",
-    "Wann haben wir am wenigsten Gewinne gemacht?",
-)
+
 sample_context = (
     "Der Bericht zeigt, dass das Unternehmen auf einem guten Kurs ist. Unsere"
     " Gewinne sind um 20% gestiegen. Allerdings haben im 3. Quartal letzten"
@@ -25,15 +21,13 @@ sample_context = (
     " Quartalen. Leider haben wir im 1. Quartal so gut wie keinen Umsatz"
     " erzielt."
 )
-input_option = "In welchem Quartal haben wir am meisten Umsatz gemacht?"
+sample_question = "In welchem Quartal haben wir am meisten Umsatz gemacht?"
 
 input_question = st.text_input(
     "Frage selbst etwas oder versuche es mit der vorgegebenen Frage:",
-    value=input_option,
+    value=sample_question,
     max_chars=128,
 )
-st.write("Andere mögliche Fragen könnten sein:")
-st.code("Wie hat sich unser Gewinn entwickelt?")
 input_context = st.text_area(
     label=(
         "Schreibe hier den Text aus dem die Antwort gefunden werden soll oder"
@@ -59,10 +53,6 @@ hide_streamlit_style = """
 <style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-.stCodeBlock div {padding-top: 2px; padding-bottom: 2px;}
-.stCodeBlock pre {padding-top: 2px; padding-bottom: 2px;}
-.stCodeBlock button {max-height: 20px;}
-p {margin-bottom: 4px; font-size: 14px}
 </style>
 
 """
