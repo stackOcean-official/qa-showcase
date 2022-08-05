@@ -1,4 +1,3 @@
-from zmq import NULL
 import streamlit as st
 from transformers import pipeline
 
