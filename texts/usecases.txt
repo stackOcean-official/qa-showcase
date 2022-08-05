@@ -1,1 +1,4 @@
-Anwendungsfälle für die Seite gehören hier rein
+- FAQs
+- chatbots
+- Wikis/Dokumentationen
+- ...

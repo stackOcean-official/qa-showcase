@@ -1,0 +1,3 @@
+Informationen aus Berichten extrahieren
+
+Berichte fassen viele wichtige Daten zusammen. Dennoch können Geschäftsberichte hunderte Seiten lang sein. Sich jeden einzelnen Datenpunkt zu merken oder auch nur diejenigen, die relevant wirken ist ein großer Aufwand. Und wenn zu einem späteren Zeitpunkt doch noch andere Daten benötigt werden muss erst einmal neu danach gesucht werden. Selbst wenn eine Person dafür existiert, muss diese erstmal verfügbar sein und das kostet Zeit. Wenn der Text doch nur direkt befragt werden könnte. Hier kann künstliche Intelligenz helfen.

@@ -1,0 +1,7 @@
+Eine Frage-Antwort KI
+
+Frage-Antwort KIs können Fragen in natürlicher Sprache entgegen nehmen und suchen die Antwort aus einem gegebenen Kontext heraus. Sie haben ein semantisches Verständnis menschlicher Sprache und suchen deswegen nicht nur nach Stichworten. So kann jede/r die Antworten aus jeglichen Texten finden ohne groß danach suchen zu müssen.
+
+Andere Frage-Antwort KIs können auch aus einem Kontext eigene Antworten generieren und manche brauchen sogar keinen Kontext.
+
+Unten haben wir ein Modell bereit gestellt, dass aus einem kurzen Text versucht die Antwort für eine Frage zu extrahieren. Ein kleines Beispiel ist gegeben, aber eigene Texte können gerne ausprobiert werden.
